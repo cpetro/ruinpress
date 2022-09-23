@@ -1,0 +1,59 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-accent: #000000;
+	--font-body: 18px;
+	--font-small: 10px;
+	--font-large: 40px;
+}
+
+@layer base {
+	* {
+		color: inherit;
+		box-sizing: border-box;
+	}
+
+	html {
+		font-size: var(--font-body);
+		font-family: 'AGaramondPro-Regular', Times, serif;
+		line-height: 1.4;
+		color: var(--color-accent);
+		text-align: left;
+	}
+
+	h1, h2, h3, h4 {
+		margin: 0;
+	}
+
+	h1 {
+		font-size: var(--font-large);
+		font-weight: bold;
+	}
+
+	h2, h3, h4 {
+		font-size: var(--font-body);
+		font-weight: bold;
+		margin: 0 0 1rem;
+	}
+
+ 	p {
+		margin: 0 0 1rem;
+	}
+
+	p:last-of-type {
+		margin: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
