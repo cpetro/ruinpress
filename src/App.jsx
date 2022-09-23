@@ -70,7 +70,7 @@ class GoogleSheetsData extends Component {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/:id" element={<PageDetail { ...data } />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Router>
       </div>
@@ -97,13 +97,6 @@ function Home() {
   )
 }
 
-function NotFound() {
-  return (
-    <div className="hidden">
-      <h1>Not Found!</h1>
-    </div>
-  )
-}
 function PageDetail(props) {
 
   const { id } = useParams();
