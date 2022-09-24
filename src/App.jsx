@@ -69,7 +69,7 @@ class GoogleSheetsData extends Component {
 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/:id" element={<PageDetail { ...data } />} />
+            <Route path=":id" element={<PageDetail { ...data } />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Router>
