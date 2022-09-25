@@ -1,9 +1,6 @@
 import {useEffect} from 'react';
 
-import {
-  PayPalButtons,
-  usePayPalScriptReducer
-} from "@paypal/react-paypal-js";
+import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 
 const style = { 'layout': 'vertical', 'color': 'silver'};
 

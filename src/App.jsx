@@ -1,17 +1,8 @@
 import React, { useContext } from 'react';
 
-import Papa from 'papaparse';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate
-} from 'react-router-dom';
-
-import {
-  PayPalScriptProvider,
-} from "@paypal/react-paypal-js";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 const PAYPAL_CLIENT_ID = {
   clientId: 'AQacwHFoxXwz1IuIG4g5rG6xFtLxJmwFjf3OhyT_HheCCxfnFxnlm7VccmXzFD3MNVJqb_xY6LDnaIUJ'
@@ -19,13 +10,9 @@ const PAYPAL_CLIENT_ID = {
 
 import { DataContext, DataContextProvider } from '././contexts/DataContextProvider';
 
-import { 
-  Header, 
-  Home, 
-  PageDetail 
-} from '~/components';
+import { Header, Home, PageDetail } from '~/components';
 
-function App() {
+export function App() {
   return(
     <PayPalScriptProvider options= {{"client-id": PAYPAL_CLIENT_ID.clientId }}>
       <DataContextProvider>
@@ -41,5 +28,3 @@ function App() {
     </PayPalScriptProvider>
   ) 
 }
-
-export default App;

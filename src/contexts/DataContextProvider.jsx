@@ -1,9 +1,6 @@
-import React, { 
-  createContext, 
-  useState, 
-  useEffect 
-} from "react";
-import Papa from "papaparse";
+import React, { createContext, useState, useEffect } from "react";
+
+import Papa from 'papaparse';
 
 const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSVTHz5EiCM1TIBUvHuHFXKYG-2MFWtq3Qcvnc35wB3nGBgn35XTfb6i4ByorPAqOJMVQdJZKl-_Uv8/pub?output=csv';
 
