@@ -4,7 +4,10 @@ import { useParams, Navigate } from 'react-router-dom';
 
 import { DataContext } from '../../contexts/DataContextProvider';
 
-import { ButtonWrapper } from '~/components';
+import { 
+  ButtonWrapper,
+  Image
+} from '~/components';
 
 export function PageDetail() {
 
@@ -39,13 +42,13 @@ export function PageDetail() {
       <div className="flex flex-cols-1 flex-col md:flex-row-reverse gap-4 md:gap-8 lg:gap-16 p-4 md:p-8 lg:p-16 max-w-screen-lg mx-auto">
         <div className="flex flex-col w-full md:w-1/3 gap-4 md:gap-8 relative">
           { img1 !== '' &&
-            <img className="w-full" alt={ id } src={ img1 } />
+            <Image alt={ id } src={ img1 } />
           }
           { img2 !== '' &&
-            <img className="w-full" alt={ id } src={ img2 } />
+            <Image alt={ id } src={ img2 } />
           }
           { img3 !== '' &&
-            <img className="w-full" alt={ id } src={ img3 } />
+            <Image alt={ id } src={ img3 } />
           }
         </div>
         <div className="flex flex-col w-full md:w-2/3 gap-4 md:gap-8 md:self-start">
