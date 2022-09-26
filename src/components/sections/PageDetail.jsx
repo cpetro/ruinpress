@@ -13,11 +13,11 @@ export function PageDetail() {
 
   const { id } = useParams();
 
-  const context = useContext(DataContext);
+  const data = useContext(DataContext);
 
-  // console.log(context);
+  // console.log(data);
 
-  const index = context?.findIndex(element => {
+  const index = data?.findIndex(element => {
     if (element.id === id ) {
       return true;
     }
@@ -25,16 +25,16 @@ export function PageDetail() {
     return false;
   });
 
-  const title = context?.[index]?.title;
-  const subtitle = context?.[index]?.subtitle;
-  const price = parseInt(context?.[index]?.price);
-  const shipping = parseInt(context?.[index]?.shipping);
-  const international = parseInt(context?.[index]?.international);
-  const description = context?.[index]?.description;
-  const content = context?.[index]?.content;
-  const img1 = context?.[index]?.img1;
-  const img2 = context?.[index]?.img2;
-  const img3 = context?.[index]?.img3;
+  const title = data?.[index]?.title;
+  const subtitle = data?.[index]?.subtitle;
+  const price = parseInt(data?.[index]?.price);
+  const shipping = parseInt(data?.[index]?.shipping);
+  const international = parseInt(data?.[index]?.international);
+  const description = data?.[index]?.description;
+  const content = data?.[index]?.content;
+  const img1 = data?.[index]?.img1;
+  const img2 = data?.[index]?.img2;
+  const img3 = data?.[index]?.img3;
 
   return (
 
