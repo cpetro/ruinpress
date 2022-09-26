@@ -12,7 +12,7 @@ export function PageDetail() {
 
   const context = useContext(DataContext);
 
-  console.log(context);
+  // console.log(context);
 
   const index = context?.findIndex(element => {
     if (element.id === id ) {
