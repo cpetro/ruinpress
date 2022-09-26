@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
@@ -12,7 +12,7 @@ import { DataContext, DataContextProvider } from '././contexts/DataContextProvid
 
 import { Header, Home, PageDetail } from '~/components';
 
-export function App() {
+function App() {
   return(
     <PayPalScriptProvider options= {{"client-id": PAYPAL_CLIENT_ID.clientId }}>
       <DataContextProvider>
@@ -28,3 +28,5 @@ export function App() {
     </PayPalScriptProvider>
   ) 
 }
+
+export default App;
