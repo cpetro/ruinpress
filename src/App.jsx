@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
